@@ -1,0 +1,75 @@
+:root {
+  --bg: #f4f6f9;
+  --card: #ffffff;
+  --text: #1b2733;
+  --muted: #5b6b7b;
+  --border: #dde3ea;
+  --brand: #0b3d5c;
+  --accent: #0a7ea4;
+  color-scheme: light;
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  color: var(--text);
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); }
+h1, h2, p { margin: 0; }
+
+.container { max-width: 1100px; margin: 0 auto; padding: 0 16px; }
+main.container { display: flex; flex-direction: column; gap: 16px; padding-top: 16px; padding-bottom: 40px; }
+
+.app-header { background: var(--brand); color: #fff; padding: 20px 0; }
+.app-header h1 { font-size: 1.6rem; }
+.app-header p { margin-top: 6px; color: #c9dbe8; font-size: 0.9rem; }
+
+.card { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 16px; }
+.card-head { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.card-head h2 { font-size: 1.05rem; }
+.card-sub { color: var(--muted); font-size: 0.85rem; margin: 4px 0 12px; }
+
+.badge-mock { background: #fff4d6; border: 1px solid #e0b53a; color: #7a5b00; font-size: 0.72rem; padding: 2px 8px; border-radius: 999px; font-weight: 600; }
+.mock-banner { background: #fff4d6; border: 1px solid #e0b53a; border-radius: 8px; padding: 10px 14px; font-size: 0.9rem; }
+
+.range-form { display: flex; flex-wrap: wrap; gap: 12px; align-items: flex-end; }
+.field { display: flex; flex-direction: column; gap: 4px; }
+.field label { font-size: 0.8rem; color: var(--muted); }
+.field input { padding: 8px; border: 1px solid var(--border); border-radius: 6px; font: inherit; }
+.presets { display: flex; gap: 8px; flex-wrap: wrap; margin-left: auto; }
+.form-problem { flex-basis: 100%; color: #b3261e; font-size: 0.85rem; }
+
+.btn { background: var(--accent); color: #fff; border: 0; border-radius: 6px; padding: 9px 16px; font: inherit; cursor: pointer; }
+.btn:disabled { opacity: 0.5; cursor: not-allowed; }
+.btn-ghost { background: transparent; color: var(--accent); border: 1px solid var(--accent); }
+
+.kpi-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 12px; }
+.kpi { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 14px; }
+.kpi-label { color: var(--muted); font-size: 0.8rem; }
+.kpi-value { font-size: 1.5rem; font-weight: 700; margin: 6px 0 4px; color: var(--brand); }
+.kpi-hint { color: var(--muted); font-size: 0.75rem; }
+.kpi-foot { color: var(--muted); font-size: 0.8rem; margin-top: 8px; }
+
+.chart-box { height: 340px; }
+.chart-box-small { height: 240px; }
+
+.quality-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 10px; margin: 0 0 12px; }
+.quality-list dt { color: var(--muted); font-size: 0.8rem; }
+.quality-list dd { margin: 2px 0 0; font-weight: 600; }
+.note { font-size: 0.85rem; color: var(--muted); margin-top: 6px; }
+
+.status { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 32px 16px; text-align: center; color: var(--muted); }
+.status h2 { color: var(--text); font-size: 1.1rem; margin-bottom: 8px; }
+.status .btn { margin-top: 14px; }
+.status-error { background: #fdecea; border-color: #d9534f; }
+.spinner { width: 28px; height: 28px; margin: 0 auto 12px; border: 3px solid var(--border); border-top-color: var(--accent); border-radius: 50%; animation: spin 0.8s linear infinite; }
+@keyframes spin { to { transform: rotate(360deg); } }
+
+@media (max-width: 600px) {
+  .presets { margin-left: 0; }
+  .chart-box { height: 280px; }
+}
+
+.coverage-note { margin-top: 8px; padding: 8px 12px; border-radius: 6px; background: #eef4f8; border: 1px solid var(--border); color: var(--muted); font-size: 0.8rem; }
+.coverage-note p + p { margin-top: 4px; }
+.coverage-warn { background: #fff4d6; border-color: #e0b53a; color: #5c4400; }
+.tooltip { background: #fff; border: 1px solid var(--border); border-radius: 6px; padding: 8px 10px; font-size: 0.8rem; box-shadow: 0 2px 8px rgba(0,0,0,.08); }
+.tooltip-time { font-weight: 600; margin-bottom: 4px; }
