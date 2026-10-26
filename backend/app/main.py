@@ -15,7 +15,7 @@ app = FastAPI(title="UK Wind Forecast API")
 # Local development: the Vite dev server runs on a different port, so the browser needs CORS.
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=config.CORS_ORIGINS,
+    allow_origins=CORS_ORIGINS,
     allow_methods=["GET"],
     allow_headers=["*"],
 )

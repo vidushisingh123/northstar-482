@@ -101,9 +101,15 @@ docker run --rm -p 8000:8000 wind-dashboard      # open http://localhost:8000
 One image builds the React app and serves it together with the API on one origin.
 
 ## Deployment
+The UK Wind Power Forecast Dashboard is deployed on Vercel, with the React frontend and FastAPI backend hosted as separate projects.
 
-**[TODO: platform (Vercel or Heroku as specified by the assignment), steps used, and the public URL.]**
-Heroku container deploy uses the included `heroku.yml`.
+Frontend: https://northstar-482-zg3y.vercel.app
+
+Backend API: https://northstar-482.vercel.app
+
+API documentation: https://northstar-482.vercel.app/docs
+
+Health check: https://northstar-482.vercel.app/api/health
 
 ## Testing
 
@@ -112,7 +118,6 @@ CORS, Elexon client retries/timeouts. Frontend (`vitest`): chart rendering, date
 
 ## AI use disclosure
 
-**[TODO – edit so it is accurate for what YOU did.]** Draft: *This project was built with substantial assistance from
-Claude (Anthropic) through the Claude web app: it proposed the architecture and generated most of the initial code,
-tests and documentation. I ran, tested and reviewed the code locally, checked the Elexon documentation, and I am
-responsible for the submission. Time spent: [N] hours.*
+AI tools were used to assist with parts of the development process, including code generation, debugging, test creation, documentation, and implementation guidance. The generated suggestions were reviewed and integrated into the project as appropriate. I remain responsible for the final implementation, testing, and project decisions.
+
+AI assistance was used as a development aid; data sources, forecast-alignment assumptions, evaluation metrics, and application behavior should be validated against the underlying requirements and source data.

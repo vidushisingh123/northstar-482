@@ -32,6 +32,11 @@ FRONTEND_DIST_DIR = os.getenv("FRONTEND_DIST_DIR", "")
 # Browser origins allowed to call this API (the Vite dev server).
 CORS_ORIGINS = [
     origin.strip()
-    for origin in os.getenv("CORS_ORIGINS", "http://localhost:5173,http://127.0.0.1:5173").split(",")
+    for origin in os.getenv(
+        "CORS_ORIGINS",
+        "http://localhost:5173,"
+        "http://127.0.0.1:5173,"
+        "https://northstar-482-zg3y.vercel.app",
+    ).split(",")
     if origin.strip()
 ]
