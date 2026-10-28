@@ -1,5 +1,6 @@
 from datetime import date
 from pathlib import Path
+from app.config import CORS_ORIGINS
 
 from fastapi import Depends, FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
